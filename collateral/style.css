@@ -1,0 +1,822 @@
+﻿
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, caption, table, tbody, tfoot, thead, tr, th, td {
+    border: 0;
+    font-family: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+/* remember to define focus styles! */
+:focus {
+    outline: 1px dotted black;
+}
+
+body {
+    background: #fff;
+    color: #333;
+    line-height: 1;
+}
+
+ol {
+    list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+caption, th, td {
+    font-weight: normal;
+    text-align: left;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: "";
+}
+
+blockquote, q {
+    quotes: "" "";
+}
+
+a img {
+    border: 0;
+}
+
+
+
+/*
+   General 
+------------------------------------------------------------------- */
+
+html {
+    padding-bottom: 1px; /* force scrollbars */
+}
+
+body {
+    background: #ffffff;
+    color: #444;
+    font: normal 75% sans-serif;
+    line-height: 1.5;
+}
+
+/*
+   Typography 
+------------------------------------------------------------------- */
+
+/* Headings */
+
+h1, h2 {
+    font-family: Times New Roman;
+    color: #444;
+    line-height: 1;
+    margin-top: 0.2em;
+    margin-bottom: 0.1em;
+}
+
+
+/* Links */
+a:link {
+    color: #0000FF;
+}
+
+/* visited link */
+a:visited {
+    color: #0000FF;
+}
+
+a:focus, a:hover {
+    color: #039;
+}
+
+a {
+    color: #456;
+    text-decoration: none;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    a.feed {
+        background: url('../images/icon-feed.gif') no-repeat left center;
+        padding-left: 18px;
+    }
+
+    a.more {
+        color: #579;
+        font-weight: bold;
+    }
+
+        a.more:hover {
+            color: #234;
+        }
+
+/* Text elements */
+
+p {
+    margin-bottom: 1em;
+}
+
+abbr, acronym {
+    border-bottom: 1px dotted #666;
+}
+
+address {
+    margin-bottom: 1.5em;
+}
+
+blockquote {
+    margin: 1.5em;
+}
+
+del, blockquote {
+    color: #666;
+}
+
+em, dfn, blockquote, address {
+    font-style: italic;
+}
+
+strong, dfn {
+    font-weight: bold;
+}
+
+sup, sub {
+    line-height: 0;
+}
+
+pre {
+    margin: 1.5em 0;
+    white-space: pre;
+}
+
+pre, code, tt {
+    font: 1em monospace;
+    line-height: 1.5;
+}
+
+/* Lists */
+
+li ul, li ol {
+    margin-left: 1.5em;
+}
+
+ul, ol {
+    margin: 0 0 1.5em 1.5em;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+ol {
+    list-style-type: decimal;
+    margin-left: 1.9em;
+}
+
+dl {
+    margin: 0 0 1.5em 0;
+}
+
+    dl dt {
+        font-weight: bold;
+    }
+
+dd {
+    margin-left: 1.5em;
+}
+
+/* Special lists */
+
+ul.plain-list li, ul.nice-list li, ul.tabbed li {
+    list-style: none;
+    margin-top: 0;
+}
+
+ul.tabbed {
+    display: inline-block; /*display: inline; ever edit*/
+    margin: 0;
+}
+
+    ul.tabbed li {
+        float: left;
+        font-size: 9pt;
+    }
+
+ul.plain-list {
+    margin: 0;
+}
+
+ul.nice-list {
+    margin-left: 0;
+}
+
+    ul.nice-list li {
+        border-top: 1px solid #EEE;
+        list-style: none;
+        padding: 4px 0;
+    }
+
+        ul.nice-list li:first-child {
+            border-top: none;
+        }
+
+        ul.nice-list li .right {
+            color: #999;
+        }
+
+/*
+   Alignment 
+------------------------------------------------------------------- */
+
+/* General */
+
+.center, .aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Images */
+
+img.bordered, img.alignleft, img.alignright, img.aligncenter {
+    background-color: #FFF;
+    border: 1px solid #DDD;
+    padding: 3px;
+}
+
+img.alignleft, img.left {
+    margin: 0 1.5em 1em 0;
+}
+
+img.alignright, img.right {
+    margin: 0 0 1em 1.5em;
+}
+
+/* Floats */
+
+.left, .alignleft {
+    float: left;
+}
+
+.right, .alignright {
+    float: right;
+}
+
+.clear, .clearer {
+    clear: both;
+}
+
+.clearer {
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    height: 0;
+}
+
+/*
+   Separators 
+------------------------------------------------------------------- */
+
+.content-separator, .archive-separator {
+    background: #E5E5E5;
+    clear: both;
+    color: #FFE;
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    height: 1px;
+}
+
+.content-separator {
+    margin: 32px 0;
+}
+
+.archive-separator {
+    margin-bottom: 20px;
+}
+
+/*
+   Layout 
+------------------------------------------------------------------- */
+
+/* Common */
+#top, #sub-nav {
+    border-bottom: 1px solid #DDD;
+}
+
+#ics-2018 {
+    text-align: center;
+}
+/* Wrapper */
+#site-wrapper {
+    margin: 0 auto;
+    min-width: 960px;
+    width: 100%;
+    background: #FFF;
+    float:none;
+}
+
+/*main*/
+#main-content {
+    /*top 24-<14*/
+    width: 882px;
+    /*width: 960px*/
+    height: auto;
+    margin-top: 25px;
+}
+/*#main-content {
+    min-height:1000px;
+}
+*/
+/* Header */
+#header {
+    padding-top: 5px;
+    width: 980px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*24 den 5 e degisti*/
+
+
+/* Top */
+#top {
+    /*padding-bottom: 15px;*/ /*ever edit*/
+    width: 882px;
+    /*width: 960px*/
+    /*margin-left: 50px;
+    margin-right: 50px;*/
+}
+
+    #top h1 {
+        font-size: 25px;
+        text-align: center;
+        font-family: "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif;
+        letter-spacing: -0.03em;
+        line-height: 42px;
+    }
+
+    #top h2 {
+        font-size: 20px;
+        text-align: center;
+        color: #000;
+        font-family: "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif;
+    }
+
+.swiper-container {
+    width: 882px;
+    /*width: 960px*/
+    height: 250px;
+}
+
+.swiper-slide > img {
+    width: 100%;
+    height: 100%
+}
+
+
+/* Splash */
+#splash {
+    padding-top: 32px;
+}
+
+/* Navigation */
+.navigation a {
+    color: #888;
+    text-decoration: none;
+}
+
+    .navigation a:hover {
+        color: #002;
+    }
+
+.navigation li.current-tab a {
+    color: #1B2024;
+}
+
+#main-nav li:first-child, #sub-nav li:first-child {
+    margin-left: 0;
+}
+
+/* Main navigation */
+#main-nav { /*ever edit*/
+    padding-top: 10px;
+    margin: 0 auto;
+    text-align: center;
+}
+#down{
+	margin: 0 0em;
+	position: relative;
+}
+
+/*72 den 20 ye*/
+#main-nav li {
+    margin: 0 1em;
+}
+
+#main-nav a {
+    font-size: 1.2em;
+    /*line-height: 1.3em;
+    padding-bottom: 2px;*/
+}
+
+#main-nav li.current-tab a {
+    color: #1B2024;
+    float:left; //设置浮动
+	line-height:30px; //设置文本垂直居中
+}
+
+#main-nav a:hover {
+    color: #002;
+}
+
+#main-nav li.current-tab a {
+    border-bottom: 2px solid #1B2024;
+}
+
+#down_li, #down_li_s{
+	margin: 0 0em;
+	padding: 0;
+	display: none;
+	position: absolute;
+}
+#down_li a{
+	margin: 0 0em;
+	border:1px solid #E5E5E5;
+	width: 160px;
+	height: 25px;
+	display: block;
+    text-align: left;
+    background-color: #ffffff;*/
+}
+#down_li_s a{
+    margin: 0 0em;
+    border:1px solid #E5E5E5;
+    width: 100px;
+    height: 25px;
+    display: block;
+    text-align: left;
+    background-color: #ffffff;*/
+}
+#main-nav li:hover ul{
+display:block;//使用hover，当鼠标移动到对应的一级菜单上是显示二级菜单
+}
+/* Main */
+.main {
+    margin: 24px 0;
+}
+/*
+    .main#main-two-columns {
+        background: url('../images/main-two-columns.gif') repeat-y right top;
+    }
+
+    .main#main-two-columns-left {
+        background: url('../images/main-two-columns-left.gif') repeat-y left top;
+    }
+
+        .main#main-two-columns #main-content, .main#main-two-columns-left #main-content {
+            width: 620px;
+        }
+*/
+/* Footer */
+
+#footer {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0px;
+    font-family: 'Abel', sans-serif;
+    background-color: #FFFFFF;
+}
+
+/* Three Column Footer Content */
+
+#footer-content {
+    border-top: 1px solid #ccc;
+    overflow: hidden;
+    width: 882px;
+    margin: auto auto;
+    padding: 0px;
+    color: #000000;
+}
+
+    #footer-content h2 {
+        font-family: Times New Roman;
+        color: #000000;
+        line-height: 1;
+        font-size: 24px;
+        text-align: center;
+    }
+
+
+
+    #footer-content ul {
+        margin: 0px;
+        letter-spacing: -1px;
+        font-size: 30px;
+    }
+
+/*
+   Misc overriding classes
+------------------------------------------------------------------- */
+
+/* Border */
+.imgul li {
+    display: inline-block;
+    margin: 0 5px;
+    list-style: none;
+    align-items: center;
+    vertical-align: top;
+}
+
+.noborder {
+    border: 0;
+}
+
+.notborder {
+    border-top: 0;
+}
+
+.norborder {
+    border-right: 0;
+}
+
+.nobborder {
+    border-bottom: 0;
+}
+
+.nolborder {
+    border-left: 0;
+}
+
+/* Margin */
+
+.nomargin {
+    margin: 0;
+}
+
+.notmargin {
+    margin-top: 0;
+}
+
+.normargin {
+    margin-right: 0;
+}
+
+.nobmargin {
+    margin-bottom: 0;
+}
+
+.nolmargin {
+    margin-left: 0;
+}
+
+/* Padding */
+
+.nopadding {
+    padding: 0;
+}
+
+.notpadding {
+    padding-top: 0;
+}
+
+.norpadding {
+    padding-right: 0;
+}
+
+.nobpadding {
+    padding-bottom: 0;
+}
+
+.nolpadding {
+    padding-left: 0;
+}
+
+/*
+   IE Fixes (zzz)
+------------------------------------------------------------------- */
+
+* html .navigation, * html #footer, * html #splash, * html .comment ul {
+    height: 0.01%;
+}
+
+* html #footer-left {
+    width: 980px;
+}
+
+.navigation, #splash, .comment ul {
+    min-height: 0.01%;
+}
+
+#site-wrapper {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+.first-li {
+    margin-left: 1.0em!important;
+}
+
+.vote_show {
+    width: 100%;
+    height: auto;
+    display: none;
+    margin: 0px,5px;
+}
+
+#main-content .active {
+    display: block;
+}
+
+/*
+   新增主题样式 ever
+------------------------------------------------------------------- */
+h1, h2, h3 {
+    color: #000;
+    font-family: "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif;
+    font-weight: bold;
+    text-rendering: optimizelegibility;
+}
+
+#widget-area {
+    width: 20%;
+    float: right;
+}
+
+.widget-title {
+    border-bottom: 1px solid #ccc;
+    border-top: 3px solid #000;
+    font-family: "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0.025em;
+    margin: 0 0 8px 0;
+    padding: 2px;
+    /*text-transform: uppercase;*/
+}
+
+.textwidget img {
+    /*padding-top:5px;*/
+    text-align:center;
+    margin:0 auto;
+    /*width: 100%;*/
+}
+
+#index-content-container {
+    /*margin-left:2%;*/
+    width: 76%;
+    float: left;
+    text-align: justify;
+    font-size: 16px;
+    font-family: "Times New Roman",Georgia,Serif;
+}
+
+    .index-content-container p {
+        margin-bottom: 1.2em;
+    }
+
+.content-container {
+    /*margin-left: 2%;
+    margin-right: 2%;*/
+    width: 100%;
+    text-align: justify;
+    font-size: 16px;
+    font-family: "Times New Roman",Georgia,Serif;
+}
+
+    .content-container p {
+        margin-bottom: 1.2em;
+    }
+
+.entry-title {
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: 24px;
+    padding: 0 0 8px;
+}
+
+
+    .entry-title a {
+        color: #000;
+    }
+
+.entry-meta {
+    color: #888;
+    font: 12px "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif;
+}
+
+    .entry-meta a {
+        color: #888;
+    }
+
+        .entry-meta a:focus,
+        .entry-meta a:hover {
+            color: #df0000;
+        }
+
+.entry-content,
+.entry-summary {
+    margin: 0.6em 0 0 0;
+}
+
+    .entry-content h1,
+    .entry-content h2,
+    .entry-content h4 {
+        margin-bottom: 0.425em;
+    }
+
+   
+    .entry-content h2 {
+        font-size: 19px;
+        line-height: 30px;
+
+    }
+
+    .entry-content h1 {
+        font-size: 20px;
+        /*border-bottom: 1px solid #ffffff;
+        padding-bottom: 0.425em;*/
+    }
+
+    .entry-content h3 {
+        letter-spacing: 0.025em;
+        font-size: 17px;
+    }
+
+    .entry-content h4 {
+        color: #888;
+        font-size: 18px;
+        font-style: italic;
+    }
+
+    .entry-content h5,
+    .entry-content h6 {
+        font-weight: bold;
+    }
+
+    .entry-content h5 {
+        font-size: 12px;
+    }
+
+    .entry-content h6 {
+        font-size: 10px;
+    }
+
+    .entry-content table {
+        border: 1px solid #ccc;
+        margin: 0 -1px 24px 0;
+        text-align: left;
+        color: #333;
+        font: 14px Georgia, "Bitstream Charter", serif;
+        line-height: 1.7;
+    }
+
+    .entry-content tr th,
+    .entry-content thead th {
+        font: 12px "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif;
+        font-weight: bold;
+        line-height: 18px;
+        padding: 9px 12px;
+    }
+
+    .entry-content tr td {
+        border-top: 1px solid #ccc;
+        padding: 6px 12px;
+    }
+
+    .entry-content tr.odd td {
+        background: #f2f7fc;
+    }
+
+    .entry-content table dl {
+        margin: 0;
+    }
+
+    .entry-content .gallery {
+        margin: 0 auto 1.7em;
+    }
+/*table in #program*/
+	.bggray{
+		background-color:#EBEBEB;
+	}
+	.solidline{
+		background-color:#CFCFCF;
+		height:0.01px;
+	}
