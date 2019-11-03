@@ -815,8 +815,19 @@ h1, h2, h3 {
 /*table in #program*/
 	.bggray{
 		background-color:#EBEBEB;
+        vertical-align: middle;
 	}
 	.solidline{
 		background-color:#CFCFCF;
-		height:0.01px;
+        vertical-align: middle;
 	}
+    .hlight{
+        background-color:#FCF3CF;
+        vertical-align: middle;
+    }
+    .hsession{
+        background-color:#D6EAF8;
+        vertical-align: middle;
+    }
+
+}
